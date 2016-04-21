@@ -28,10 +28,6 @@ for i in $FIND_BAR; do mv $i `echo $i | sed s/bar/foo/g`; done
 FIND_MOO=$(find . -name "*moo*" -type f | sed 's|./||')
 for i in $FIND_MOO; do mv $i `echo $i | sed s/moo/bar/g`; done
 
-#Create new variables with updated results post-sed
-#BAR=$FIND_BAR
-#FOO=$FIND_FOO
-
 #Grep though all files and search for foo or bar, cut the unnecessary part of the output and pipe to uniq to avoid duplicate results. This is to output the files that content has changed.
 FILES=$(grep 'foo\|bar' * | sort)
 
