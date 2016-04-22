@@ -4,8 +4,7 @@
 DIR=$1
 
 #Choose directory where you want to run the script
-if [ -z $1 ]
-then
+if [ -z $1 ]; then
   echo "Usage $0 <path-to-directory>"
   exit 1
 fi
